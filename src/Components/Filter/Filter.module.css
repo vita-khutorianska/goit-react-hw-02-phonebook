@@ -24,7 +24,7 @@
   font-size: 25px;
   line-height: 1.77;
   font-weight: 700;
-  color: #07021f;
+  color: rgb(3, 3, 71);
 }
 .input:focus {
   border-color: #2521f3;
