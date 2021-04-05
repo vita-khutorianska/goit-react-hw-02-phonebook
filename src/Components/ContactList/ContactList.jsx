@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 const ContactList = ({ onDeleteContact, contacts }) => (
   <div className={styles.contact}>
     ContactList
-    <ul className={styles.contact_list}>
+    <ul>
       {contacts.map(({ name, id, number }) => {
         return (
-          <li className={styles.contact_item} key={id}>
-            <span className={styles.contact_item_name}>{name}:</span>
-            <span className={styles.contact_item_tel}>{number}</span>{' '}
+          <li key={id}>
+            <span>{name}:</span>
+            <span>{number}</span>{' '}
             <button
               type="submit"
               className={styles.contact_btn}

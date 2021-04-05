@@ -57,14 +57,15 @@ class App extends Component {
 
     return (
       <div>
-        <div title="Phonebook">
+        <div>
+          <h1>Phonebook</h1>
           <ContactForm value={name} onSubmit={this.addContact} />
         </div>
         <Filter value={filter} onChange={this.filterChange} />
         <ContactList
           onDeleteContact={this.deleteContact}
           contacts={filterNamePhoneBook}
-        />{' '}
+        />
       </div>
     );
   }
