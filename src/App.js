@@ -7,9 +7,15 @@ import Filter from './Components/Filter';
 
 class App extends Component {
   state = {
-    contacts: [],
-    name: '',
+    contacts: [
+      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
+      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
+      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
+    ],
+    filter: '',
   };
+
   addContact = ({ name, number }) => {
     // console.log("this.state.contacts",this.state.contacts)
     const sameName = this.state.contacts.some(item => item.name === name);
@@ -31,6 +37,17 @@ class App extends Component {
       };
     });
   };
+
+  filterChange = e => {
+    this.setState({ filter: e.currentTarget.value });
+  };
+
+  deleteContact = id => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== id),
+    }));
+  };
+
   render() {
     const { name, filter } = this.state;
     const normalizedFilter = this.state.filter.toLowerCase();
@@ -40,13 +57,14 @@ class App extends Component {
 
     return (
       <div>
-        <ContactForm value={name} onSubmit={this.addContact} />
-
+        <div title="Phonebook">
+          <ContactForm value={name} onSubmit={this.addContact} />
+        </div>
         <Filter value={filter} onChange={this.filterChange} />
         <ContactList
           onDeleteContact={this.deleteContact}
           contacts={filterNamePhoneBook}
-        />
+        />{' '}
       </div>
     );
   }
