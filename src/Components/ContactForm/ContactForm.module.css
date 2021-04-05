@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
-  border: 1px solid grey;
+  border: 1px solid rgb(100, 100, 109);
   border-radius: 10px;
   margin-bottom: 30px;
   background-color: rgb(247, 247, 247);
@@ -31,7 +31,7 @@
   color: black;
 }
 .input:focus {
-  border-color: #2196f3;
+  border-color: #2521f3;
 }
 .btn {
   font-family: 'Segoe UI', sans-serif;

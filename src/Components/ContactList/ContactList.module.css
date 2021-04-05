@@ -28,10 +28,10 @@
   margin-bottom: 3px;
   margin-left: 10px;
   padding: 5px 5px;
-  background-color: whitesmoke;
+  background-color: rgb(216, 207, 207);
   color: black;
   font-weight: 500;
-  border: 0.5px solid grey;
+  border: 0.5px solid rgb(247, 247, 247);
   outline: none;
   cursor: pointer;
 }
