@@ -9,7 +9,7 @@ const ContactList = ({ onDeleteContact, contacts }) => (
         return (
           <li key={id}>
             <span>{name}:</span>
-            <span>{number}</span>{' '}
+            <span>{number}</span>
             <button
               type="submit"
               className={styles.contact_btn}
@@ -20,7 +20,7 @@ const ContactList = ({ onDeleteContact, contacts }) => (
           </li>
         );
       })}
-    </ul>{' '}
+    </ul>
   </div>
 );
 ContactList.propTypes = {
