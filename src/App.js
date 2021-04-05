@@ -18,10 +18,10 @@ class App extends Component {
 
   addContact = ({ name, number }) => {
     // console.log("this.state.contacts",this.state.contacts)
-    const sameName = this.state.contacts.some(item => item.name === name);
-    console.log('sameName', sameName);
+    const exitingName = this.state.contacts.some(item => item.name === name);
+    console.log('exitingName', exitingName);
 
-    if (sameName) {
+    if (exitingName) {
       window.alert(`LocalHost:3000 says ${name} is already in contact`);
       return;
     }
